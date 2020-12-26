@@ -1,5 +1,7 @@
 <template>
-  
+  <div>
+      Blog will be here soon.
+  </div>
 </template>
 
 <script>

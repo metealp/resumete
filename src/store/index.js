@@ -13,6 +13,8 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-      
+
   }
 })
+
+export default store
