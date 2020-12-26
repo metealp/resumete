@@ -2,20 +2,15 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated class="glossy">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="r_menu"
-        />
-
         <q-toolbar-title>
-          Quasar App
+          Mete Alp Kızılçay
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-tabs v-model="tab" shrink stretch>
+          <q-tab name="background" label="Background" />
+          <q-tab name="portfolio" label="Portfolio" />
+          <q-tab name="blog" label="Blog" />
+        </q-tabs>
       </q-toolbar>
     </q-header>
 
