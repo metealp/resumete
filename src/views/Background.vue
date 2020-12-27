@@ -1,10 +1,10 @@
 <template>
   <div >
-    <q-layout view="Hh Lpr lff" style="100%" class="shadow-2 rounded-borders">
+    <q-layout view="lHh Lpr lff" style="100%" class="shadow-2 rounded-borders" @scroll="scrollHandler">
       <q-header elevated class="bg-cyan-8">
         <q-toolbar>
-            <q-btn dense flat round icon="r_developer_mode" @click="left = !left" />
-            <q-toolbar-title> Mete Alp Kızılçay </q-toolbar-title>
+            <q-btn flat @click="drawer = !drawer" round dense icon="r_menu" />
+            <q-toolbar-title></q-toolbar-title>
             <q-tabs align="right">
                 <q-route-tab to="/" label="Resume" />
                 <q-route-tab to="/portfolio" label="Portfolio" />
@@ -21,21 +21,21 @@
       >
         <q-scroll-area style="height: calc( 100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-                        <q-item
+            <q-item
                 clickable
                 v-ripple
                 :active="link === 'intro'"
-                @click="link = 'intro'"
+                @click="scrollToElement('intro')"
                 active-class="my-menu-link"
             >
-                <q-item-section>Intro</q-item-section>
+                <q-item-section>Introduction</q-item-section>
             </q-item>
 
             <q-item
                 clickable
                 v-ripple
                 :active="link === 'skills'"
-                @click="link = 'skills'"
+                @click="scrollToElement('skills')"
                 active-class="my-menu-link"
             >
                 <q-item-section>Skills</q-item-section>
@@ -45,7 +45,7 @@
                 clickable
                 v-ripple
                 :active="link === 'education'"
-                @click="link = 'education'"
+                @click="scrollToElement('education')"
                 active-class="my-menu-link"
             >
                 <q-item-section>Education</q-item-section>
@@ -55,8 +55,9 @@
                 clickable
                 v-ripple
                 :active="link === 'experience'"
-                @click="link = 'experience'"
+                @click="scrollToElement('experience')"
                 active-class="my-menu-link"
+                to="#experience"
             >
                 <q-item-section>Experience</q-item-section>
             </q-item>
@@ -65,7 +66,7 @@
                 clickable
                 v-ripple
                 :active="link === 'interests'"
-                @click="link = 'interests'"
+                @click="scrollToElement('interests')"
                 active-class="my-menu-link"
             >
                 <q-item-section>Interests</q-item-section>
@@ -74,8 +75,9 @@
                 clickable
                 v-ripple
                 :active="link === 'volunteering'"
-                @click="link = 'volunteering'"
+                @click="scrollToElement('volunteering')"
                 active-class="my-menu-link"
+                to="#volunteering"
             >
                 <q-item-section>Volunteering Program</q-item-section>
             </q-item>
@@ -83,7 +85,7 @@
                 clickable
                 v-ripple
                 :active="link === 'references'"
-                @click="link = 'references'"
+                @click="scrollToElement('references')"
                 active-class="my-menu-link"
             >
                 <q-item-section>References</q-item-section>
@@ -118,10 +120,14 @@
       </q-drawer>
 
       <q-page-container>
-        <q-page padding>
-          <p v-for="n in 115" :key="n">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil praesentium molestias a adipisci, dolore vitae odit, quidem consequatur optio voluptates asperiores pariatur eos numquam rerum delectus commodi perferendis voluptate?
-          </p>
+        <q-page padding >
+            <h3 id="intro">Introduction</h3>
+            <h3 id="skills">Skills</h3>
+            <h3 id="education">Education</h3>
+            <h3 id="experience">Experiences</h3>
+            <h3 id="interests">Interests</h3>
+            <h3 id="volunteering">Volunteering</h3>
+            <h3 id="references">References</h3>
         </q-page>
       </q-page-container>
     </q-layout>
@@ -132,12 +138,13 @@ import { fabLinkedin } from '@quasar/extras/fontawesome-v5';
 import { fabInstagram } from '@quasar/extras/fontawesome-v5';
 import { fabGithub } from '@quasar/extras/fontawesome-v5';
 import { fabTwitter } from '@quasar/extras/fontawesome-v5';
-
+import { scroll } from 'quasar'
+// const { getScrollTarget, setScrollPosition } = scroll
 
 export default {
   data() {
     return {
-        left: false,
+        drawer: false,
         link: "intro",
         linkedinIcon: "",
         twitterIcon: null,
@@ -151,6 +158,20 @@ export default {
       this.githubIcon = fabGithub
       this.instagramIcon = fabInstagram
 
+  },
+  methods: {
+    scrollHandler(details){
+        console.log(details.position)
+    },
+    scrollToElement(elmId){
+        const elm =  document.getElementById(elmId);
+        const target = scroll.getScrollTarget(elm);
+        const offset = elm.offsetTop - elm.scrollHeight;
+        console.log(offset)
+        const duration = 300;
+        scroll.setScrollPosition(target, offset, duration);
+        this.link = elmId; 
+    }
   }
 };
 </script>
