@@ -57,7 +57,6 @@
                 :active="link === 'experience'"
                 @click="scrollToElement('experience')"
                 active-class="my-menu-link"
-                to="#experience"
             >
                 <q-item-section>Experience</q-item-section>
             </q-item>
@@ -77,7 +76,6 @@
                 :active="link === 'volunteering'"
                 @click="scrollToElement('volunteering')"
                 active-class="my-menu-link"
-                to="#volunteering"
             >
                 <q-item-section>Volunteering Program</q-item-section>
             </q-item>
@@ -121,13 +119,14 @@
 
       <q-page-container>
         <q-page padding >
-            <h3 id="intro">Introduction</h3>
-            <h3 id="skills">Skills</h3>
-            <h3 id="education">Education</h3>
-            <h3 id="experience">Experiences</h3>
-            <h3 id="interests">Interests</h3>
-            <h3 id="volunteering">Volunteering</h3>
-            <h3 id="references">References</h3>
+            <h3 class="resumeSectionTitle" id="intro">Introduction</h3>
+            <h3 class="resumeSectionTitle" id="skills">Skills</h3>
+            <h3 class="resumeSectionTitle" id="education">Education</h3>
+            <h3 class="resumeSectionTitle" id="experience">Experiences</h3>
+            <p v-for="n in 50" :key="n">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam, alias aliquam saepe illum aperiam nostrum magni provident voluptate eos recusandae, fuga nisi soluta quaerat, earum voluptatum quis harum reiciendis!</p>
+            <h3 class="resumeSectionTitle" id="interests">Interests</h3>
+            <h3 class="resumeSectionTitle" id="volunteering">Volunteering</h3>
+            <h3 class="resumeSectionTitle" id="references">References</h3>
         </q-page>
       </q-page-container>
     </q-layout>
@@ -150,6 +149,7 @@ export default {
         twitterIcon: null,
         githubIcon: null,
         instagramIcon: null,
+        currentPosition: 0,
     };
   },
   created() {
@@ -161,17 +161,41 @@ export default {
   },
   methods: {
     scrollHandler(details){
-        console.log(details.position)
+        // console.log(details.position)
+        this.currentPosition = details.position
     },
     scrollToElement(elmId){
         const elm =  document.getElementById(elmId);
         const target = scroll.getScrollTarget(elm);
         const offset = elm.offsetTop - elm.scrollHeight;
-        console.log(offset)
         const duration = 300;
         scroll.setScrollPosition(target, offset, duration);
         this.link = elmId; 
     }
-  }
+  },
+//   computed: {
+//       closest
+//   },
+    watch: {
+        currentPosition: function (newPos){
+            const titles = Array.from(document.getElementsByClassName("resumeSectionTitle"))
+            const withPos = titles.map( (x) => ( 
+                { 
+                    elemId: x.id,
+                    position: x.offsetTop 
+                } 
+            ));
+            let posDiff = 0;
+            let closestTitle = "intro";
+            withPos.forEach(x => { 
+                if(x.position-newPos+20 < posDiff){
+                    posDiff = newPos-x.position;
+                    closestTitle = x.elemId;
+                }
+            })
+            this.link = closestTitle;
+
+        }
+    }
 };
 </script>
