@@ -75,6 +75,7 @@
                 <h3 class="resumeSectionTitle" id="interests">Interests</h3>
                 <h3 class="resumeSectionTitle" id="volunteering">Volunteering</h3>
                 <h3 class="resumeSectionTitle" id="references">References</h3>
+                <References> </References>
             </q-page>
         </template>
     </Layout>
@@ -86,11 +87,13 @@
 import { scroll } from 'quasar';
 import { debounce } from 'quasar';
 import Layout from '../layouts/Layout';
+import References from '../components/References';
 // const { getScrollTarget, setScrollPosition } = scroll
 
 export default {
     components: {
         Layout,
+        References,
     },
     data() {
         return {

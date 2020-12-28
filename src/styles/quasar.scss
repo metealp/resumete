@@ -11,3 +11,31 @@
     height: max-content;
     padding: 0px !important;
 }
+
+.referenceAvatar {
+    font-size: 50px !important;
+}
+
+.referenceCard {
+    margin: 5px 10px;
+    width: 290px;
+    display: flex;
+}
+.referenceCard:first-of-type {
+    margin-left: 0;
+}
+
+.referenceCard .q-btn {
+    text-decoration: underline;
+    text-transform: none;
+    text-align: start;
+    padding: 0;
+}
+
+h3.resumeSectionTitle {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $dark;
+    padding-bottom: 10px;
+}
