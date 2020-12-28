@@ -157,11 +157,9 @@ export default {
       this.twitterIcon = fabTwitter
       this.githubIcon = fabGithub
       this.instagramIcon = fabInstagram
-
   },
   methods: {
     scrollHandler(details){
-        // console.log(details.position)
         this.currentPosition = details.position
     },
     scrollToElement(elmId){
@@ -194,7 +192,6 @@ export default {
                 }
             })
             this.link = closestTitle;
-
         }
     }
 };
