@@ -68,7 +68,9 @@
         <template v-slot:page>
             <q-page padding>
                 <h3 class="resumeSectionTitle" id="intro">Introduction</h3>
+                <Introduction> </Introduction>
                 <h3 class="resumeSectionTitle" id="skills">Skills</h3>
+                <Skills> </Skills>
                 <h3 class="resumeSectionTitle" id="education">Education</h3>
                 <h3 class="resumeSectionTitle" id="experience">Experiences</h3>
                 <p v-for="n in 50" :key="n">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam, alias aliquam saepe illum aperiam nostrum magni provident voluptate eos recusandae, fuga nisi soluta quaerat, earum voluptatum quis harum reiciendis!</p>
@@ -88,12 +90,17 @@ import { scroll } from 'quasar';
 import { debounce } from 'quasar';
 import Layout from '../layouts/Layout';
 import References from '../components/References';
+import Introduction from '../components/Introduction';
+import Skills from '../components/Skills';
+
 // const { getScrollTarget, setScrollPosition } = scroll
 
 export default {
     components: {
         Layout,
         References,
+        Introduction,
+        Skills,
     },
     data() {
         return {

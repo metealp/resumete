@@ -1,6 +1,9 @@
 @import './quasar.variables.scss';
 @import '~quasar-styl';
 // @import '~quasar-addon-styl';
+body {
+    // font-size: 13px;
+}
 
 #resumeAvatarCont {
     background: transparent !important;
@@ -38,4 +41,55 @@ h3.resumeSectionTitle {
     margin-bottom: 15px;
     border-bottom: 1px solid $dark;
     padding-bottom: 10px;
+}
+
+#skillsCont h5 {
+    display: block !important;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+.skillSect {
+    padding: 0px 10px;
+    border-right: 1px solid $dark;
+}
+.skillSect:last-of-type {
+    border-right: none;
+}
+
+#htmlAvatar {
+    background-color: $html;
+}
+#cssAvatar {
+    background-color: #264de4;
+}
+#vueAvatar {
+    background-color: #41B883;
+}
+
+#dockerAvatar {
+    background-color: #0db7ed;
+}
+#mongoAvatar {
+    background-color: #3FA037;
+}
+#expressAvatar {
+    background-color: #F0DB4F;
+}
+#nodeAvatar {
+    background-color: #3C873A;
+}
+#swiftAvatar {
+    background-color: #fa5f2f;
+}
+#swiftUiAvatar {
+    background-color: #064fb8;
+}
+#gitAvatar {
+    background-color: #F1502F;
+}
+#azureAvatar {
+    background-color: #00a1f1;
 }

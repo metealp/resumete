@@ -62,21 +62,21 @@ import { fabGithub } from '@quasar/extras/fontawesome-v5';
 import { fabTwitter } from '@quasar/extras/fontawesome-v5';
 
 export default {
-  data() {
-    return {
-        drawer: false,
-        linkedinIcon: "",
-        twitterIcon: null,
-        githubIcon: null,
-        instagramIcon: null,
-    };
-  },
-  created() {
-      this.linkedinIcon = fabLinkedin
-      this.twitterIcon = fabTwitter
-      this.githubIcon = fabGithub
-      this.instagramIcon = fabInstagram
-  },
+    data() {
+        return {
+            drawer: false,
+            linkedinIcon: "",
+            twitterIcon: null,
+            githubIcon: null,
+            instagramIcon: null,
+        };
+    },
+    created() {
+        this.linkedinIcon = fabLinkedin
+        this.twitterIcon = fabTwitter
+        this.githubIcon = fabGithub
+        this.instagramIcon = fabInstagram
+    },
 
 };
 </script>
