@@ -17,6 +17,7 @@ body {
 #mainDrawer > .q-drawer {
     background: $mainBg;
 }
+
 #resumeAvatarCont {
     background: transparent !important;
 }
@@ -71,6 +72,9 @@ h3.resumeSectionTitle {
 @media (max-width: 400px) {
     .skillSect {
         border-right: none;
+    }
+    #mainDrawer > .q-drawer {
+        background: #f1f2f6;
     }
 }
 
