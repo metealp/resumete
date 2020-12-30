@@ -1,6 +1,6 @@
 <template>
     <div id="skillsCont" class="row items-start">
-        <div class="skillSect col-6 col-md-auto">
+        <div class="skillSect col-12 col-md-auto">
             <h5>Frontend</h5>
             <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="vueIcon" id="vueAvatar" text-color="white" />
@@ -16,7 +16,7 @@
             </q-chip>
         </div>
         <!-- <q-separator vertical inset spaced/> -->
-        <div class="skillSect col-6 col-md-auto">
+        <div class="skillSect col-12 col-md-auto">
             <h5>Backend</h5>
             <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="nodeIcon" id="nodeAvatar" text-color="white" />
@@ -32,7 +32,7 @@
             </q-chip>
         </div>
         <!-- <q-separator vertical inset spaced/> -->
-        <div class="skillSect col-6 col-md-auto">
+        <div class="skillSect col-12 col-md-auto">
             <h5>Mobile</h5>
             <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="swiftIcon" id="swiftAvatar" text-color="white" />
@@ -44,7 +44,7 @@
             </q-chip>
         </div>
         <!-- <q-separator vertical inset spaced/> -->
-        <div class="skillSect col-6 col-md-auto">
+        <div class="skillSect col-12 col-md-auto">
             <h5>Devops</h5>
             <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="dockerIcon" id="dockerAvatar" text-color="white" />

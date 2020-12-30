@@ -23,10 +23,9 @@ body {
     margin: 5px 10px;
     width: 290px;
     display: flex;
+    overflow: auto;
 }
-.referenceCard:first-of-type {
-    margin-left: 0;
-}
+
 
 .referenceCard .q-btn {
     text-decoration: underline;
@@ -92,4 +91,11 @@ h3.resumeSectionTitle {
 }
 #azureAvatar {
     background-color: #00a1f1;
+}
+
+.volunteeringCard {
+    width: 100%;
+    max-width: 550px;
+    text-align: justify;
+    hyphens: auto;
 }

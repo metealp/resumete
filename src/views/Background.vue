@@ -72,10 +72,13 @@
                 <h3 class="resumeSectionTitle" id="skills">Skills</h3>
                 <Skills> </Skills>
                 <h3 class="resumeSectionTitle" id="education">Education</h3>
-                <h3 class="resumeSectionTitle" id="experience">Experiences</h3>
-                <p v-for="n in 50" :key="n">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam, alias aliquam saepe illum aperiam nostrum magni provident voluptate eos recusandae, fuga nisi soluta quaerat, earum voluptatum quis harum reiciendis!</p>
+                <Education> </Education>
+                <h3 class="resumeSectionTitle" id="experience">Experience</h3>
+                <Experience> </Experience>
                 <h3 class="resumeSectionTitle" id="interests">Interests</h3>
+                <Interests> </Interests>
                 <h3 class="resumeSectionTitle" id="volunteering">Volunteering</h3>
+                <Volunteering> </Volunteering>
                 <h3 class="resumeSectionTitle" id="references">References</h3>
                 <References> </References>
             </q-page>
@@ -92,6 +95,10 @@ import Layout from '../layouts/Layout';
 import References from '../components/References';
 import Introduction from '../components/Introduction';
 import Skills from '../components/Skills';
+import Experience from '../components/Experience';
+import Education from '../components/Education';
+import Interests from '../components/Interests';
+import Volunteering from '../components/Volunteering';
 
 // const { getScrollTarget, setScrollPosition } = scroll
 
@@ -101,6 +108,10 @@ export default {
         References,
         Introduction,
         Skills,
+        Experience,
+        Education,
+        Interests,
+        Volunteering,
     },
     data() {
         return {
