@@ -52,6 +52,7 @@ h3.resumeSectionTitle {
     margin-bottom: 15px;
     border-bottom: 1px solid $mainDark;
     padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 #skillsCont h5 {
@@ -66,6 +67,13 @@ h3.resumeSectionTitle {
     padding: 0px 10px;
     border-right: 1px solid $dark;
 }
+
+@media (max-width: 400px) {
+    .skillSect {
+        border-right: none;
+    }
+}
+
 .skillSect:last-of-type {
     border-right: none;
 }
@@ -124,4 +132,13 @@ h3.resumeSectionTitle {
 
 .q-item--active {
     color: $dark;
+}
+
+#introTxt {
+    padding: 10px;
+}
+
+.q-timeline__content {
+    text-align: justify;
+    hyphens: auto;
 }
