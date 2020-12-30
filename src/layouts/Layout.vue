@@ -8,7 +8,7 @@
             <q-tabs align="right">
                 <q-route-tab to="/" label="Resume" />
                 <q-route-tab to="/portfolio" label="Portfolio" />
-                <q-route-tab to="/blog" label="Blog" />
+                <!-- <q-route-tab to="/blog" label="Blog" /> -->
             </q-tabs>
         </q-toolbar>
       </q-header>
@@ -16,35 +16,40 @@
       <q-drawer
         v-model="drawer"
         show-if-above
-        :width="300"
+        :width="220"
         :breakpoint="400"
       >
-        <q-scroll-area style="height: calc( 100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
+        <q-scroll-area style="height: calc( 100% - 220px); margin-top: 220px; border-right: 1px solid #ddd">
             <slot name="drawer" />
         </q-scroll-area>
 
-        <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 150px">
-            <div id="resumeAvatarCont" class="q-pa-sm q-mt-sm absolute-left">
-                <q-avatar size="75px" >
+        <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 220px">
+            <div id="resumeAvatarCont" class="q-pa-sm q-mt-sm absolute-top">
+              <div class="row justify-center">
+                <q-avatar size="90px" class="" >
                     <img src="https://cdn.quasar.dev/img/boy-avatar.png">
                 </q-avatar>
+              </div>
             </div>
-            <div class="fixed-right bg-transparent">
+            <div class="absolute-bottom bg-transparent">
+              <div class="row justify-center">
                 <div class="text-weight-bold q-mt-md">Mete Alp Kızılçay, MSc.</div>
                 <div class="text-weight-bold">Full Stack Developer</div>
-
-                <q-btn flat size="10px" round class="socialMediaLinks" 
-                type="a" :icon="instagramIcon" 
-                href="https://www.instagram.com/mete.spam/" target="_blank" />
-                <q-btn flat size="10px" round class="socialMediaLinks" 
-                type="a" :icon="githubIcon" 
-                href="https://github.com/metealp" target="_blank" />
-                <q-btn flat size="10px" round class="socialMediaLinks" 
-                type="a" :icon="twitterIcon" 
-                href="https://twitter.com/metealpki" target="_blank" />
-                <q-btn flat size="10px" round class="socialMediaLinks" 
-                type="a" :icon="linkedinIcon" 
-                href="https://www.linkedin.com/in/mete-alp-k%C4%B1z%C4%B1l%C3%A7ay-9bb184161/" target="_blank" />
+                <div>
+                  <q-btn flat size="10px" round class="socialMediaLinks" 
+                  type="a" :icon="instagramIcon" 
+                  href="https://www.instagram.com/mete.spam/" target="_blank" />
+                  <q-btn flat size="10px" round class="socialMediaLinks" 
+                  type="a" :icon="githubIcon" 
+                  href="https://github.com/metealp" target="_blank" />
+                  <q-btn flat size="10px" round class="socialMediaLinks" 
+                  type="a" :icon="twitterIcon" 
+                  href="https://twitter.com/metealpki" target="_blank" />
+                  <q-btn flat size="10px" round class="socialMediaLinks" 
+                  type="a" :icon="linkedinIcon" 
+                  href="https://www.linkedin.com/in/mete-alp-k%C4%B1z%C4%B1l%C3%A7ay-9bb184161/" target="_blank" />
+                </div>
+              </div>
             </div>
         </q-img>
       </q-drawer>
