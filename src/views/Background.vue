@@ -7,7 +7,7 @@
                     v-ripple
                     :active="link === 'intro'"
                     @click="scrollToElement('intro')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>Introduction</q-item-section>
                 </q-item>
 
@@ -16,7 +16,7 @@
                     v-ripple
                     :active="link === 'skills'"
                     @click="scrollToElement('skills')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>Skills</q-item-section>
                 </q-item>
 
@@ -25,7 +25,7 @@
                     v-ripple
                     :active="link === 'education'"
                     @click="scrollToElement('education')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>Education</q-item-section>
                 </q-item>
 
@@ -34,7 +34,7 @@
                     v-ripple
                     :active="link === 'experience'"
                     @click="scrollToElement('experience')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>Experience</q-item-section>
                 </q-item>
 
@@ -43,7 +43,7 @@
                     v-ripple
                     :active="link === 'interests'"
                     @click="scrollToElement('interests')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>Interests</q-item-section>
                 </q-item>
                 <q-item
@@ -51,7 +51,7 @@
                     v-ripple
                     :active="link === 'volunteering'"
                     @click="scrollToElement('volunteering')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>Volunteering Program</q-item-section>
                 </q-item>
                 <q-item
@@ -59,7 +59,7 @@
                     v-ripple
                     :active="link === 'references'"
                     @click="scrollToElement('references')"
-                    active-class="my-menu-link">
+                    active-class="drawer-menu-link">
                     <q-item-section>References</q-item-section>
                 </q-item>
             </q-list>
@@ -125,7 +125,6 @@ export default {
     methods: {
         scrollHandler: debounce(function(position){
             this.currentPosition = position
-            console.log(position)
         }, 200),
         scrollToElement(elmId){
             const elm =  document.getElementById(elmId);
@@ -151,7 +150,6 @@ export default {
 //   },
     watch: {
         currentPosition: function (newPos){
-            console.log(newPos)
             let posDiff = 0;
             let closestTitle = "intro";
             this.sectionWithPos.forEach(x => { 

@@ -1,7 +1,7 @@
 <template>
   <div >
     <q-layout view="lHh Lpr lff" style="100%" class="shadow-2 rounded-borders" >
-      <q-header elevated class="bg-cyan-8">
+      <q-header elevated class="layoutHeader">
         <q-toolbar>
             <q-btn flat @click="drawer = !drawer" round dense icon="r_menu" />
             <q-toolbar-title></q-toolbar-title>
@@ -18,12 +18,13 @@
         show-if-above
         :width="220"
         :breakpoint="400"
+        id="mainDrawer"
       >
         <q-scroll-area style="height: calc( 100% - 220px); margin-top: 220px; border-right: 1px solid #ddd">
             <slot name="drawer" />
         </q-scroll-area>
 
-        <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 220px">
+        <q-img class="absolute-top avatarBgImage" :src="require('../assets/8568.jpg')" style="height: 220px">
             <div id="resumeAvatarCont" class="q-pa-sm q-mt-sm absolute-top">
               <div class="row justify-center">
                 <q-avatar size="90px" class="" >
