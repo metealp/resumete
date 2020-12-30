@@ -121,3 +121,7 @@ h3.resumeSectionTitle {
     border-radius: 5px;
     transition: padding ease 0.4s, color 0s, ease box-shadow 0.2s;
 }
+
+.q-item--active {
+    color: $dark;
+}
