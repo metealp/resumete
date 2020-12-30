@@ -13,7 +13,7 @@ body {
 .avatarBgImage > .q-img__image {
     filter: grayscale(90%) saturate(100%);
 }
-#mainDrawer,
+// #mainDrawer,
 #mainDrawer > .q-drawer {
     background: $mainBg;
 }
