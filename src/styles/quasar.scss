@@ -5,6 +5,7 @@ body {
     // font-size: 13px;
     background-color: $mainBg;
     color: $mainDark;
+    hyphens: auto;
 }
 
 .layoutHeader {
@@ -58,10 +59,10 @@ h3.resumeSectionTitle {
 
 #skillsCont h5 {
     display: block !important;
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 0;
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
 }
 .skillSect {
@@ -75,6 +76,9 @@ h3.resumeSectionTitle {
     }
     #mainDrawer > .q-drawer {
         background: #f1f2f6;
+    }
+    .referenceCard {
+        width: 100%;
     }
 }
 
@@ -123,7 +127,19 @@ h3.resumeSectionTitle {
     text-align: justify;
     hyphens: auto;
 }
-
+.volunteeringCard .text-h5,
+.interestTitle,
+.q-timeline__title,
+.skillSect h5 {
+    font-size: 17px;
+    font-weight: 500;
+}
+.volunteeringCard .volDesc,
+.interestCaption,
+.q-timeline__content {
+    font-size: 14px;
+    font-weight: 400;
+}
 .q-item--active.drawer-menu-link > .q-item__section {
     padding: 3px 10px;
     // color: $mainDark;
@@ -142,7 +158,11 @@ h3.resumeSectionTitle {
     padding: 10px;
 }
 
-.q-timeline__content {
+.q-timeline, .q-timeline__entry .q-timeline__content {
     text-align: justify;
     hyphens: auto;
+}
+
+.q-timeline__title {
+    margin-bottom: 5px;
 }

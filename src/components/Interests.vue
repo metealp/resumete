@@ -4,8 +4,8 @@
             <q-list>
                 <q-item>
                     <q-item-section>
-                        <q-item-label>Camping & Hiking</q-item-label>
-                        <q-item-label caption>I love going into a forest, exploring it, swimming in its waterfalls, greeting wild habitants.</q-item-label>
+                        <q-item-label class="interestTitle" >Camping & Hiking</q-item-label>
+                        <q-item-label class="interestCaption" caption>I love going into a forest, exploring it, swimming in its waterfalls, greeting wild habitants.</q-item-label>
                     </q-item-section>
 
                     <q-item-section side top>
@@ -17,8 +17,8 @@
 
                 <q-item>
                     <q-item-section>
-                        <q-item-label>Electronic Dance Music</q-item-label>
-                        <q-item-label caption >Although I listen wide range of musical genres, EDM and synth pop are my favorites.</q-item-label>
+                        <q-item-label class="interestTitle">Electronic Dance Music</q-item-label>
+                        <q-item-label class="interestCaption" caption >Although I listen wide range of musical genres, EDM and synth pop are my favorites.</q-item-label>
                     </q-item-section>
 
                     <q-item-section side top>
@@ -30,8 +30,8 @@
 
                 <q-item>
                     <q-item-section>
-                        <q-item-label>Hearthstone</q-item-label>
-                        <q-item-label caption>During lockdown, Hearthstone became main way of letting off steam.</q-item-label>
+                        <q-item-label class="interestTitle">Hearthstone</q-item-label>
+                        <q-item-label class="interestCaption" caption>During lockdown, Hearthstone became main way of letting off steam.</q-item-label>
                     </q-item-section>
 
                     <q-item-section side top>

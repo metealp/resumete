@@ -28,7 +28,7 @@
             <div id="resumeAvatarCont" class="q-pa-sm q-mt-sm absolute-top">
               <div class="row justify-center">
                 <q-avatar size="90px" class="" >
-                    <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+                    <img spinner-color="white" src="https://cdn.quasar.dev/img/boy-avatar.png">
                 </q-avatar>
               </div>
             </div>
