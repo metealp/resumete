@@ -130,13 +130,15 @@ h3.resumeSectionTitle {
 .volunteeringCard .text-h5,
 .interestTitle,
 .q-timeline__title,
-.skillSect h5 {
+.skillSect h5,
+.projectDets h5{
     font-size: 17px;
     font-weight: 500;
 }
 .volunteeringCard .volDesc,
 .interestCaption,
-.q-timeline__content {
+.q-timeline__content,
+.projectDets p {
     font-size: 14px;
     font-weight: 400;
 }
