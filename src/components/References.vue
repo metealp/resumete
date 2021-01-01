@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import avatar from "../assets/boy-avatar.png";
+
 export default {
     data () {
         return {
@@ -34,21 +36,21 @@ export default {
                     Title: "Project Manager at Monitor Cro",
                     Email: "zeynepmineh@monitorcro.com",
                     CoLink: "www.monitorcro.com/",
-                    ImageLink: "https://cdn.quasar.dev/img/boy-avatar.png"
+                    ImageLink: avatar
                 },
                 {
                     Name: "Mehmet Akif Ibrahimoglu",
                     Title: "Co-Founder of Nika PMC",
                     Email: "akif@nikaproje.com",
                     CoLink: "www.nikaproje.com/en",
-                    ImageLink: "https://cdn.quasar.dev/img/boy-avatar.png"
+                    ImageLink: avatar
                 },
                 {
                     Name: "Muharrem Çilek",
                     Title: "Co-Founder of Cilek Holding",
                     Email: "muharrem@cilek.com",
                     CoLink: "www.cilek.com",
-                    ImageLink: "https://cdn.quasar.dev/img/boy-avatar.png"
+                    ImageLink: avatar
                 },
             ]
         }

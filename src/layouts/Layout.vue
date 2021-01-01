@@ -28,7 +28,7 @@
             <div id="resumeAvatarCont" class="q-pa-sm q-mt-sm absolute-top">
               <div class="row justify-center">
                 <q-avatar size="90px" class="" >
-                    <img spinner-color="white" src="https://cdn.quasar.dev/img/boy-avatar.png">
+                    <img :src="layoutAvatar">
                 </q-avatar>
               </div>
             </div>
@@ -66,6 +66,7 @@ import { fabLinkedin } from '@quasar/extras/fontawesome-v5';
 import { fabInstagram } from '@quasar/extras/fontawesome-v5';
 import { fabGithub } from '@quasar/extras/fontawesome-v5';
 import { fabTwitter } from '@quasar/extras/fontawesome-v5';
+import avatar from "../assets/boy-avatar.png";
 
 export default {
     data() {
@@ -75,6 +76,7 @@ export default {
             twitterIcon: null,
             githubIcon: null,
             instagramIcon: null,
+            layoutAvatar: avatar,
         };
     },
     created() {

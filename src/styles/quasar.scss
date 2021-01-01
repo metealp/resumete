@@ -127,6 +127,13 @@ h3.resumeSectionTitle {
     text-align: justify;
     hyphens: auto;
 }
+.volunteeringCard > div.row > div.q-card__section {
+    padding: 5px 10px;
+}
+.volunteeringCard > div.row.q-card__section {
+    padding: 5px;
+}
+
 .volunteeringCard .text-h5,
 .interestTitle,
 .q-timeline__title,

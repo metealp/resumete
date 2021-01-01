@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Background from "../views/Background.vue";
+// import Portfolio from "../views/Portfolio.vue";
 
 
 Vue.use(VueRouter);
@@ -17,8 +18,10 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // component: Portfolio
+
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Portfolio.vue")
+      import("../views/Portfolio.vue")
   },
   {
     path: "/blog",
