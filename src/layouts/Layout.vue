@@ -51,6 +51,7 @@
                   href="https://www.linkedin.com/in/mete-alp-k%C4%B1z%C4%B1l%C3%A7ay-9bb184161/" target="_blank" />
                 </div>
               </div>
+              <div id="layoutContEmail">kizilcaymetealp@gmail.com</div>
             </div>
         </q-img>
       </q-drawer>
