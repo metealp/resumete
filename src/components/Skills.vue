@@ -42,6 +42,16 @@
                 <q-avatar font-size="15px" :icon="swiftIcon" id="swiftUiAvatar" text-color="white" />
                 SwiftUI
             </q-chip>
+            <q-chip size="md" square>
+                <q-avatar font-size="15px" :icon="androidIcon" id="flutterAvatar" text-color="white" />
+                Flutter
+            </q-chip>
+            <q-chip size="md" square>
+                <q-avatar font-size="15px" :icon="androidIcon" id="dartAvatar" text-color="white" />
+                Dart
+            </q-chip>
+
+            
         </div>
         <!-- <q-separator vertical inset spaced/> -->
         <div class="skillSect col-12 col-md-auto">
@@ -76,6 +86,7 @@ import { fabGitAlt } from '@quasar/extras/fontawesome-v5';
 import { fasCloud } from '@quasar/extras/fontawesome-v5';
 
 import { fabSwift } from '@quasar/extras/fontawesome-v5';
+import { fabAndroid } from '@quasar/extras/fontawesome-v5';
 
 export default {
     data() {
@@ -90,6 +101,7 @@ export default {
             gitIcon: null,
             cloudIcon: null,
             swiftIcon: null,
+            androidIcon: null,
         };
     },
     created() {
@@ -104,6 +116,8 @@ export default {
         this.gitIcon = fabGitAlt
         this.cloudIcon = fasCloud
         this.swiftIcon = fabSwift
+        this.androidIcon = fabAndroid
+
     },
 }
 </script>

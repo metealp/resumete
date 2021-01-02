@@ -66,7 +66,7 @@ import { fabLinkedin } from '@quasar/extras/fontawesome-v5';
 import { fabInstagram } from '@quasar/extras/fontawesome-v5';
 import { fabGithub } from '@quasar/extras/fontawesome-v5';
 import { fabTwitter } from '@quasar/extras/fontawesome-v5';
-import avatar from "../assets/boy-avatar.png";
+import avatar from "../assets/resume_img.jpg";
 
 export default {
     data() {

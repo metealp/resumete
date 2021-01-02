@@ -4,21 +4,21 @@
 
         <q-timeline-entry
             title="Web Developer at Monitor Cro"
-            subtitle="July, 2020 ~ ..."
+            subtitle="June, 2020 ~ ..."
             side="left"
         >
             <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Contributing to development and maintenance of electronic data capture, human resources web  apps and research monitoring mobile app for clinical research companies. Using various technologies such as Vue.js, Express, Node, MongoDB, jQuery, Flutter.
             </div>
         </q-timeline-entry>
 
         <q-timeline-entry
             title="BIM Developer at Nika PMC"
-            subtitle="December, 2018 ~ July, 2020"
+            subtitle="December, 2018 ~ June, 2020"
             side="right"
         >
             <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Contributed to development and maintenance Autodesk plugins for metro line designers, electronic data capture system for Istanbul Grand Airport contractors. Used Python, pyRevit and Revit APIs for design automation. In addition, used Django and Azure SQL Server for electronic data capture.
             </div>
         </q-timeline-entry>
 

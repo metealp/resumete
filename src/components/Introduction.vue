@@ -3,7 +3,7 @@
         <p id="introTxt">
             Hello, 
             <br>
-            A fresh full stack developer with a bunch of production experiences. Writing code detail oriented, well documented and tested or as fast as greased lightning. Seeking to take next career step with a growing startup. Having fun with talking about myself in third person.
+            I am a full stack developer with a couple of production experiences. I write code detail oriented, well documented and tested or as fast as greased lightning. I currently seeking to take next career step with a growing startup.
         </p>
     </div>
 </template>
