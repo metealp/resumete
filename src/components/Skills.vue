@@ -42,14 +42,14 @@
                 <q-avatar font-size="15px" :icon="swiftIcon" id="swiftUiAvatar" text-color="white" />
                 SwiftUI
             </q-chip>
-            <q-chip size="md" square>
+            <!-- <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="androidIcon" id="flutterAvatar" text-color="white" />
                 Flutter
             </q-chip>
             <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="androidIcon" id="dartAvatar" text-color="white" />
                 Dart
-            </q-chip>
+            </q-chip> -->
 
             
         </div>
