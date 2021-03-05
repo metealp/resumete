@@ -7,6 +7,10 @@
                 Vue.js
             </q-chip>
             <q-chip size="md" square>
+                <q-avatar font-size="15px" :icon="reactIcon" id="reactAvatar" text-color="white" />
+                React
+            </q-chip>
+            <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="htmlIcon" id="htmlAvatar" text-color="white" />
                 HTML5
             </q-chip>
@@ -64,16 +68,17 @@
                 <q-avatar font-size="15px" :icon="gitIcon" id="gitAvatar" text-color="white" />
                 Git
             </q-chip>
-            <q-chip size="md" square>
+            <!-- <q-chip size="md" square>
                 <q-avatar font-size="15px" :icon="cloudIcon" id="azureAvatar" text-color="white" />
                 Azure
-            </q-chip>
+            </q-chip> -->
         </div>
     </div>
 </template>
 
 <script>
-import { fabVuejs } from '@quasar/extras/fontawesome-v5';
+import { fabVuejs } from '@quasar/extras/fontawesome-v5'; 
+import { fabReact } from '@quasar/extras/fontawesome-v5'; 
 import { fabHtml5 } from '@quasar/extras/fontawesome-v5';
 import { fabCss3Alt } from '@quasar/extras/fontawesome-v5';
 
@@ -92,6 +97,7 @@ export default {
     data() {
         return {
             vueIcon: null,
+            reactIcon: null,
             htmlIcon: null,
             cssIcon: null,
             nodeIcon: null,
@@ -106,6 +112,7 @@ export default {
     },
     created() {
         this.vueIcon = fabVuejs
+        this.reactIcon = fabReact
         this.htmlIcon = fabHtml5
         this.cssIcon = fabCss3Alt
         this.jqueryIcon = fabVuejs
