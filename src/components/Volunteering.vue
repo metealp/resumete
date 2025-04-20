@@ -8,7 +8,7 @@
                 </q-card-section>
                 <q-card-section class="col-md-3 col-12 self-stretch order-first">
                     <q-img class="rounded-borders"
-                    :src="require('../assets/human_library.png')"
+                    :src="humanLibraryImage"
                     />
                 </q-card-section>
             </q-card-section>
@@ -23,7 +23,7 @@
                 <q-card-section class="col-md-3 col-12 order-first">
                     <q-img class="rounded-borders"
                     containt="true"
-                    :src="require('../assets/Food_Not_Bombs.png')"
+                    :src="foodNotBombsImage"
                     />
                 </q-card-section>
             </q-card-section>
@@ -31,9 +31,9 @@
   </div>
 </template>
 
-<script>
-export default {
-}
+<script setup>
+import humanLibraryImage from '../assets/human_library.png';
+import foodNotBombsImage from '../assets/Food_Not_Bombs.png';
 </script>
 
 <style>

@@ -4,20 +4,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 
-export default {
-  name: "LayoutDefault",
-
-  components: {
-  },
-
-  data() {
-    return {
-      leftDrawerOpen: false
-    };
-  }
-};
+const leftDrawerOpen = ref(false);
 </script>
 
 <style></style>

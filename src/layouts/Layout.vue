@@ -24,7 +24,7 @@
             <slot name="drawer" />
         </q-scroll-area>
 
-        <q-img class="absolute-top avatarBgImage" :src="require('../assets/8568.jpg')" style="height: 220px">
+        <q-img class="absolute-top avatarBgImage" src="/src/assets/8568.jpg" style="height: 220px">
             <div id="resumeAvatarCont" class="q-pa-sm q-mt-sm absolute-top">
               <div class="row justify-center">
                 <q-avatar size="90px" class="" >
@@ -36,22 +36,9 @@
               <div class="row justify-center">
                 <div class="text-weight-bold q-mt-md">Mete Alp Kızılçay, MSc.</div>
                 <div class="text-weight-bold">Full Stack Developer</div>
-                <div>
-                  <q-btn flat size="10px" round class="socialMediaLinks" 
-                  type="a" :icon="instagramIcon" 
-                  href="https://www.instagram.com/mete.spam/" target="_blank" />
-                  <q-btn flat size="10px" round class="socialMediaLinks" 
-                  type="a" :icon="githubIcon" 
-                  href="https://github.com/metealp" target="_blank" />
-                  <q-btn flat size="10px" round class="socialMediaLinks" 
-                  type="a" :icon="twitterIcon" 
-                  href="https://twitter.com/metealpki" target="_blank" />
-                  <q-btn flat size="10px" round class="socialMediaLinks" 
-                  type="a" :icon="linkedinIcon" 
-                  href="https://www.linkedin.com/in/mete-alp-k%C4%B1z%C4%B1l%C3%A7ay-9bb184161/" target="_blank" />
-                </div>
+                <div id="layoutContEmail"><a href="mailto:kizilcaymetealp@gmail.com" target="_blank">kizilcaymetealp@gmail.com</a></div>
+                <div id="layoutContGithub"><a href="https://github.com/metealp" target="_blank" rel="noopener noreferrer">https://github.com/metealp</a></div>
               </div>
-              <div id="layoutContEmail">kizilcaymetealp@gmail.com</div>
             </div>
         </q-img>
       </q-drawer>
@@ -62,30 +49,23 @@
     </q-layout>
   </div>
 </template>
-<script>
-import { fabLinkedin } from '@quasar/extras/fontawesome-v5';
-import { fabInstagram } from '@quasar/extras/fontawesome-v5';
-import { fabGithub } from '@quasar/extras/fontawesome-v5';
-import { fabTwitter } from '@quasar/extras/fontawesome-v5';
-import avatar from "../assets/resume_img.jpg";
 
-export default {
-    data() {
-        return {
-            drawer: false,
-            linkedinIcon: "",
-            twitterIcon: null,
-            githubIcon: null,
-            instagramIcon: null,
-            layoutAvatar: avatar,
-        };
-    },
-    created() {
-        this.linkedinIcon = fabLinkedin
-        this.twitterIcon = fabTwitter
-        this.githubIcon = fabGithub
-        this.instagramIcon = fabInstagram
-    },
+<script setup>
+import { ref, onMounted } from 'vue';
+import { fabLinkedin, fabInstagram, fabGithub, fabTwitter } from '@quasar/extras/fontawesome-v5';
+import avatarImg from "../assets/resume_img.jpg";
 
-};
+const drawer = ref(false);
+const linkedinIcon = ref(null);
+const twitterIcon = ref(null);
+const githubIcon = ref(null);
+const instagramIcon = ref(null);
+const layoutAvatar = ref(avatarImg);
+
+onMounted(() => {
+  linkedinIcon.value = fabLinkedin;
+  twitterIcon.value = fabTwitter;
+  githubIcon.value = fabGithub;
+  instagramIcon.value = fabInstagram;
+});
 </script>

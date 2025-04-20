@@ -86,80 +86,54 @@
     </Layout>
 </template>
 
+<script setup>
+import { ref, onMounted, watch } from 'vue';
+import { scroll, debounce } from 'quasar';
+import Layout from '../layouts/Layout.vue';
+import References from '../components/References.vue';
+import Introduction from '../components/Introduction.vue';
+import Skills from '../components/Skills.vue';
+import Experience from '../components/Experience.vue';
+import Education from '../components/Education.vue';
+import Interests from '../components/Interests.vue';
+import Volunteering from '../components/Volunteering.vue';
 
-<script>
+const drawer = ref(false);
+const link = ref("intro");
+const currentPosition = ref(0);
+const sectionTitles = ref(null);
+const sectionWithPos = ref(null);
 
-import { scroll } from 'quasar';
-import { debounce } from 'quasar';
-import Layout from '../layouts/Layout';
-import References from '../components/References';
-import Introduction from '../components/Introduction';
-import Skills from '../components/Skills';
-import Experience from '../components/Experience';
-import Education from '../components/Education';
-import Interests from '../components/Interests';
-import Volunteering from '../components/Volunteering';
+const scrollHandler = debounce(function(position) {
+    currentPosition.value = position;
+}, 200);
 
-// const { getScrollTarget, setScrollPosition } = scroll
-
-export default {
-    components: {
-        Layout,
-        References,
-        Introduction,
-        Skills,
-        Experience,
-        Education,
-        Interests,
-        Volunteering,
-    },
-    data() {
-        return {
-            drawer: false,
-            link: "intro",
-            currentPosition: 0,
-            sectionTitles: null,
-            sectionWithPos: null,
-        };
-    },
-    methods: {
-        scrollHandler: debounce(function(position){
-            this.currentPosition = position
-        }, 200),
-        scrollToElement(elmId){
-            const elm =  document.getElementById(elmId);
-            const target = scroll.getScrollTarget(elm);
-            const offset = elm.offsetTop - elm.scrollHeight;
-            const duration = 300;
-            scroll.setScrollPosition(target, offset, duration);
-            this.link = elmId; 
-        }
-    },
-    mounted() {
-        this.sectionTitles = Array.from(document.getElementsByClassName("resumeSectionTitle"))
-        this.sectionWithPos = this.sectionTitles.map( (x) => ( 
-            { 
-                elemId: x.id,
-                position: x.offsetTop 
-            } 
-        ));
-    
-    },
-//   computed: {
-//       closest
-//   },
-    watch: {
-        currentPosition: function (newPos){
-            let posDiff = 0;
-            let closestTitle = "intro";
-            this.sectionWithPos.forEach(x => { 
-                if(x.position-newPos+20 < posDiff){
-                    posDiff = newPos-x.position;
-                    closestTitle = x.elemId;
-                }
-            })
-            this.link = closestTitle;
-        }
-    }
+const scrollToElement = (elmId) => {
+    const elm = document.getElementById(elmId);
+    const target = scroll.getScrollTarget(elm);
+    const offset = elm.offsetTop - elm.scrollHeight;
+    const duration = 300;
+    scroll.setScrollPosition(target, offset, duration);
+    link.value = elmId;
 };
+
+onMounted(() => {
+    sectionTitles.value = Array.from(document.getElementsByClassName("resumeSectionTitle"));
+    sectionWithPos.value = sectionTitles.value.map((x) => ({
+        elemId: x.id,
+        position: x.offsetTop
+    }));
+});
+
+watch(currentPosition, (newPos) => {
+    let posDiff = 0;
+    let closestTitle = "intro";
+    sectionWithPos.value.forEach(x => {
+        if (x.position - newPos + 20 < posDiff) {
+            posDiff = newPos - x.position;
+            closestTitle = x.elemId;
+        }
+    });
+    link.value = closestTitle;
+});
 </script>

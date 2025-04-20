@@ -1,6 +1,11 @@
+// Import Quasar styles rather than using @import
+// The variables will be provided through the Vite config
+
+// Add any global styles here
 @import './quasar.variables.scss';
-@import '~quasar-styl';
-// @import '~quasar-addon-styl';
+// Direct import from node_modules for Vite
+@import 'quasar/src/css/index.sass';
+
 body {
     // font-size: 13px;
     background-color: $mainBg;
@@ -186,6 +191,12 @@ h3.resumeSectionTitle {
 }
 
 #layoutContEmail {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+#layoutContGithub {
     font-size: 13px;
     text-align: center;
     margin-bottom: -5px;

@@ -1,5 +1,13 @@
 <template>
-    <div class="row">        
+    <div class="row">
+        <q-card class="referenceCard" flat bordered>
+            <q-item>
+                <q-item-section>
+                    <q-item-label class="text-center">References available upon request</q-item-label>
+                </q-item-section>
+            </q-item>
+        </q-card>
+        <!-- Original references
         <q-card class="referenceCard" flat bordered v-for="ref in references" :key="ref.Name">
             <q-item>
                 <q-item-section avatar >
@@ -21,6 +29,7 @@
                 </q-item-section>
             </q-item>
         </q-card>
+        -->
     </div>
 </template>
 
@@ -31,6 +40,7 @@ export default {
     data () {
         return {
             references: [
+                /* Original references data
                 {
                     Name: "Zeynep Mine HOLTA",
                     Title: "Project Manager at Monitor Cro",
@@ -52,6 +62,7 @@ export default {
                     CoLink: "www.cilek.com",
                     ImageLink: avatar
                 },
+                */
             ]
         }
     }
