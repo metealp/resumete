@@ -88,7 +88,7 @@
 
 <script setup>
 import { ref, onMounted, watch } from 'vue';
-import { scroll, debounce } from 'quasar';
+import { debounce } from 'quasar';
 import Layout from '../layouts/Layout.vue';
 import References from '../components/References.vue';
 import Introduction from '../components/Introduction.vue';
@@ -109,12 +109,15 @@ const scrollHandler = debounce(function(position) {
 }, 200);
 
 const scrollToElement = (elmId) => {
-    const elm = document.getElementById(elmId);
-    const target = scroll.getScrollTarget(elm);
-    const offset = elm.offsetTop - elm.scrollHeight;
-    const duration = 300;
-    scroll.setScrollPosition(target, offset, duration);
-    link.value = elmId;
+    const element = document.getElementById(elmId);
+    if (element) {
+        // Use native browser smooth scrolling
+        element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start'
+        });
+        link.value = elmId;
+    }
 };
 
 onMounted(() => {
