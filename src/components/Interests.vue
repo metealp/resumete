@@ -17,8 +17,8 @@
 
                 <q-item>
                     <q-item-section>
-                        <q-item-label class="interestTitle">Electronic Dance Music</q-item-label>
-                        <q-item-label class="interestCaption" caption >Although I listen wide range of musical genres, EDM and synth pop are my favorites.</q-item-label>
+                        <q-item-label class="interestTitle">Folk Music</q-item-label>
+                        <q-item-label class="interestCaption" caption>I enjoy playing traditional instruments like baglama, kopuz, and bendir to recite and preserve my culture.</q-item-label>
                     </q-item-section>
 
                     <q-item-section side top>
@@ -30,8 +30,8 @@
 
                 <q-item>
                     <q-item-section>
-                        <q-item-label class="interestTitle">Hearthstone</q-item-label>
-                        <q-item-label class="interestCaption" caption>During lockdown, Hearthstone became main way of letting off steam.</q-item-label>
+                        <q-item-label class="interestTitle">Video Gaming</q-item-label>
+                        <q-item-label class="interestCaption" caption>I enjoy playing various video games to relax and connect with friends.</q-item-label>
                     </q-item-section>
 
                     <q-item-section side top>
